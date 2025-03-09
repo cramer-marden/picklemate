@@ -13,7 +13,8 @@
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write .",
     "ts:check": "tsc --noEmit -p tsconfig.json",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "generate:expo-route-types": "expo customize tsconfig.json" 
   },
   "jest": {
     "preset": "jest-expo"
