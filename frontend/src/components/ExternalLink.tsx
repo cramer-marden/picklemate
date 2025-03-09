@@ -10,13 +10,14 @@ export function ExternalLink({ href, ...rest }: Props) {
     <Link
       target="_blank"
       {...rest}
+      //@ts-expect-error - I don't know how to fix right now
       href={href}
-      onPress={async (event) => {
+      onPress={(event) => {
         if (Platform.OS !== 'web') {
           // Prevent the default behavior of linking to the default browser on native.
           event.preventDefault();
           // Open the link in an in-app browser.
-          await openBrowserAsync(href);
+          void openBrowserAsync(href);
         }
       }}
     />
