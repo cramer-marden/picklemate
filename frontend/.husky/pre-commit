@@ -1,2 +1,2 @@
 cd frontend
-bun test
+bunx lint-staged
