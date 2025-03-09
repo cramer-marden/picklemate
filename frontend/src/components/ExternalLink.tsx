@@ -10,7 +10,6 @@ export function ExternalLink({ href, ...rest }: Props) {
     <Link
       target="_blank"
       {...rest}
-      //@ts-expect-error - I don't know how to fix right now
       href={href}
       onPress={(event) => {
         if (Platform.OS !== 'web') {
