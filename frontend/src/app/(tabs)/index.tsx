@@ -14,7 +14,8 @@ export default function HomeScreen() {
           source={require('@/assets/images/react-logo.png')}
           className="absolute bottom-0 left-0 h-[178px] w-[290px]"
         />
-      }>
+      }
+    >
       <ThemedView className="flex flex-row items-center gap-2">
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
