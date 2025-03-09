@@ -10,6 +10,4 @@ export default {
     // Format the code after linting
     'bun run format',
   ],
-  // Run Prettier on other file types
-  '**/*.{json,md}': ['prettier --write'],
 };
