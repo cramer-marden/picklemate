@@ -4,11 +4,11 @@
  */
 export default {
   // Run ESLint on JS, TS, and TSX files
-  "**/*.{js,jsx,ts,tsx}": [
+  "**/*.{js,mjs,cjs,jsx,ts,tsx}": [
     // Only lint files that are staged (not the entire codebase)
-    'eslint --fix',
+    'bun run lint:fix',
     // Format the code after linting
-    'prettier --write',
+    "bun run format",
   ],
   // Run Prettier on other file types
   '**/*.{json,md}': ["prettier --write"],
