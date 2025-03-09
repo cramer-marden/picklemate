@@ -1,0 +1,31 @@
+name: Frontend Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  frontend-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: 📦 Install Dependencies
+        run: bun install --frozen-lockfile
+
+      - name: 🧪 Run Tests
+        run: bun run test
+
+      - name: 🧪 Run TS Check
+        run: bun run ts:check
+
+      - name: 🧪 Run Lint
+        run: bun run lint
+
+      - name: 🧪 Run Format Check
+        run: bun run format:check
