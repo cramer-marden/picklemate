@@ -22,7 +22,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: 🧪 Run Tests
-        run: bun run test
+        run: bun run test:ci
 
       - name: 🧪 Run TS Check
         run: bun run ts:check

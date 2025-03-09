@@ -9,6 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
+    "test:ci": "jest --ci",
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write .",
     "ts:check": "tsc --noEmit",
