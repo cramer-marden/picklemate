@@ -10,7 +10,8 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={{ uri: '@/assets/images/partial-react-logo.png' }}
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          source={require('@/assets/images/react-logo.png')}
           className="absolute bottom-0 left-0 h-[178px] w-[290px]"
         />
       }
